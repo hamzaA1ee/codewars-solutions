@@ -1,9 +1,13 @@
+// Digitwise addition is a special kind of addition where instead of adding 1 normally to the number, it adds 1 to every digit of that number. If the digit is a 9, we replace it with a 10 without carrying over to the next digit.
+
+// Examples
+// 123 -> 234
+// 910 -> 1021
+// 789 -> 8910
+
 function digitwiseAddition(N, K) {
     console.log(N,K)
-      // Test Constraints:
-      // 1 <= n <= 10 ** 9
-      // 1 <= k <= 10 ** 5
-      // if(1 <= N <= 10 ** 9 && 1 <= K <= 10 ** 5) return 
+     
       const number=String(N)
       const nums=number.split('')
       for(let i=0;i<K;i++){
@@ -26,11 +30,13 @@ function digitwiseAddition(N, K) {
     }
     }
       
-    console.log(nums.join(''))
+    console.log(nums.join(''),nums.join('').length)
       return nums.join('').length
     }
 
-//Incomplete
-// taking too long
+    digitwiseAddition(817121709,12)
+
+
+// taking too long -> timeout exceeds
 
 // https://www.codewars.com/kata/663e0eccecb2d0a12da51f84/train/javascript
